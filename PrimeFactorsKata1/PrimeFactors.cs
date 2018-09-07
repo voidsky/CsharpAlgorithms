@@ -5,13 +5,29 @@ namespace PrimeFactorsKata1
 {
     public class PrimeFactors
     {
-        public static List<int> Generate(int number)
+        public static List<int> GenerateUsingRecursion(int number)
         {
             List<int> factors = new List<int>();
-            if (number == 1) return factors;
+
+            for (int x = 2; x <= number; x++)
+            {
+                if (number % x == 0)
+                {
+                    factors.Add(x);
+                    factors.AddRange(GenerateUsingRecursion(number / x));
+                    return factors;
+                }
+            }
+
+            return factors;
+        }
+
+        public static List<int> GenerateUsingItteration(int number)
+        {
+            List<int> factors = new List<int>();
 
             int x = 2;
-            while ( x <= number)
+            while ( x <= number )
             {
                 if (number % x == 0)
                 {
