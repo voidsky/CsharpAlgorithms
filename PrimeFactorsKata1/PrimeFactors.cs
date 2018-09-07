@@ -8,15 +8,13 @@ namespace PrimeFactorsKata1
         public static List<int> GenerateUsingRecursion(int number)
         {
             List<int> factors = new List<int>();
-            for (int x = 2; x <= number; x++)
-            {
-                if (number % x == 0)
+            for (int divisor = 2; divisor <= number; divisor++)
+                if (number % divisor == 0)
                 {
-                    factors.Add(x);
-                    factors.AddRange(GenerateUsingRecursion(number / x));
+                    factors.Add( divisor );
+                    factors.AddRange(GenerateUsingRecursion(number / divisor));
                     return factors;
                 }
-            }
             return factors;
         }
 
@@ -24,14 +22,12 @@ namespace PrimeFactorsKata1
         {
             List<int> factors = new List<int>();
             int num = number;
-            for (int x = 2; x <= num; x++)
-            {
-                while (num % x == 0)
+            for (int divisor = 2; divisor <= num; divisor++)
+                while ( num % divisor == 0 )
                 {
-                    factors.Add(x);
-                    num /= x;
+                    factors.Add(divisor);
+                    num /= divisor;
                 }
-            }
             return factors;
         }
     }
