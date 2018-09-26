@@ -13,7 +13,7 @@ namespace Algorithms
 		[Test]
 		public void TestPushAndPop()
         {
-            IStack<int> stack = new ResizingArrayStack<int>();
+            ResizingArrayStack<int> stack = new ResizingArrayStack<int>();
             Assert.AreEqual(true, stack.IsEmpty());
             stack.Push(6);
             Assert.AreEqual(1, stack.Size());
@@ -21,6 +21,14 @@ namespace Algorithms
             Assert.AreEqual(2, stack.Size());
             stack.Push(8);
             Assert.AreEqual(3, stack.Size());
+
+            int shouldBe = 6;
+            foreach (int item in stack)
+            {
+                Assert.AreEqual(shouldBe, item);
+                shouldBe++;
+            }
+
             stack.Pop();
             Assert.AreEqual(2, stack.Size());
             stack.Pop();

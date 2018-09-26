@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    public class ResizingArrayStack<T> : IStack<T>
+    public class ResizingArrayStack<T> : IStack<T>, IEnumerable<T>
     {
         private T[] Items = new T[1];
         private int Pointer;
@@ -43,6 +44,19 @@ namespace Algorithms
         public int Size()
         {
             return Pointer;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int index = 0; index < Pointer; index++)
+            {
+                yield return Items[index];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
