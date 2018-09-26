@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ResizingArrayStackTest.cs" />
+    <Compile Include="IStack.cs" />
+    <Compile Include="ResizingArrayStack.cs" />
     <Compile Include="FixedCapacityStack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

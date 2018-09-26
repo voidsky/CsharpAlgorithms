@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    public class FixedCapacityStack<T>
+    public class FixedCapacityStack<T> : IStack<T>
     {
         private T[] StackItems;
         private int StackPointer;
@@ -32,11 +32,9 @@ namespace Algorithms
             return this.StackPointer == 0;
         }
 
-        public int Size
+        public int Size()
         {
-            get {
-                    return this.StackPointer;
-                }
+            return this.StackPointer;
         }
     }
 }
