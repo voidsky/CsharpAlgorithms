@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    /* Stack implemented using linked lists */
+    /* Stack is LIFO type of container. */
+    /* This is Stack implemented using linked lists. */
     public class Stack<T> : IStack<T>, IEnumerable<T>
     {
         private Node<T> First;
