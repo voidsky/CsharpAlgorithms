@@ -48,17 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="INode.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="StackTest.cs" />
     <Compile Include="ResizingArrayStackTest.cs" />
     <Compile Include="IStack.cs" />
     <Compile Include="ResizingArrayStack.cs" />
     <Compile Include="FixedCapacityStack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stack.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FixedCapacityStackTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Stack\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

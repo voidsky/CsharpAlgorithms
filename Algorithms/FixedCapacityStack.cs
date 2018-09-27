@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
+    /* Stack implemented using fixed capacity array */
     public class FixedCapacityStack<T> : IStack<T>
     {
         private T[] StackItems;

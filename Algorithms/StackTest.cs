@@ -8,12 +8,12 @@ using NUnit.Framework;
 namespace Algorithms
 {
 	[TestFixture]
-    public class ResizingArrayStackTest
+    public class StackTest
     {
 		[Test]
 		public void TestPushAndPop()
         {
-            ResizingArrayStack<int> stack = new ResizingArrayStack<int>();
+            Stack<int> stack = new Stack<int>();
             Assert.AreEqual(true, stack.IsEmpty());
             stack.Push(6);
             Assert.AreEqual(1, stack.Size());

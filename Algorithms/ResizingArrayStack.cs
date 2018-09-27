@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
+    /* Stack implemented using automatically resizing array */
     public class ResizingArrayStack<T> : IStack<T>, IEnumerable<T>
     {
         private T[] Items = new T[1];
@@ -48,7 +49,7 @@ namespace Algorithms
 
         public IEnumerator<T> GetEnumerator()
         {
-            for (int index = 0; index < Pointer; index++)
+            for (int index = Pointer-1; index >=0; index--)
             {
                 yield return Items[index];
             }
