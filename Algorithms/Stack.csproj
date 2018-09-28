@@ -49,9 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="INode.cs" />
+    <Compile Include="IQueue.cs" />
+    <Compile Include="IBag.cs" />
     <Compile Include="Node.cs" />
-    <Compile Include="StackTest.cs" />
-    <Compile Include="ResizingArrayStackTest.cs" />
+    <Compile Include="Queue.cs" />
+    <Compile Include="Tests\QueueTest.cs" />
+    <Compile Include="Bag.cs" />
+    <Compile Include="Tests\BagTest.cs" />
+    <Compile Include="Tests\StackTest.cs" />
+    <Compile Include="Tests\ResizingArrayStackTest.cs" />
     <Compile Include="IStack.cs" />
     <Compile Include="ResizingArrayStack.cs" />
     <Compile Include="FixedCapacityStack.cs" />
@@ -59,7 +65,7 @@
     <Compile Include="Stack.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FixedCapacityStackTest.cs" />
+    <Compile Include="Tests\FixedCapacityStackTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

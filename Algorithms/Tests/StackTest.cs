@@ -23,18 +23,25 @@ namespace Algorithms
             Assert.AreEqual(3, stack.Size());
 
             int shouldBe = 8;
-            foreach (int item in stack)
+            foreach (int i in stack)
             {
-                Assert.AreEqual(shouldBe, item);
+                Assert.AreEqual(shouldBe, i);
                 shouldBe--;
             }
 
-            stack.Pop();
+            int item;
+            item = stack.Pop();
             Assert.AreEqual(2, stack.Size());
-            stack.Pop();
+            Assert.AreEqual(8, item);
+
+            item = stack.Pop();
             Assert.AreEqual(1, stack.Size());
-            stack.Pop();
+            Assert.AreEqual(7, item);
+
+            item = stack.Pop();
             Assert.AreEqual(0, stack.Size());
+            Assert.AreEqual(6, item);
+
         }
     }
 }
