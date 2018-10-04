@@ -17,10 +17,10 @@ namespace BigNumber
         public void TestLongDivision(string dividend, int divisor, string result, int rem)
         {
             BigNumber b = new BigNumber(dividend);
-            Algorithms.Queue<int> stack = b.DivBy(divisor, out int reminder);
+            b.DivBy(divisor, out int reminder);
 
             StringBuilder str = new StringBuilder();
-            foreach (int i in stack)
+            foreach (int i in b.inQueue)
             {
                 str.Append(i);
             }

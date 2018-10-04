@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Algorithms\Stack.c
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GcdOfBigNumbers", "GcdOfBigNumbers\GcdOfBigNumbers.csproj", "{503D4B84-8659-4F6D-AE91-37BFC8F20626}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigNumber", "BigNumber\BigNumber.csproj", "{CAD0BC60-7B6A-4D24-8B85-E9FBB05E1EBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{503D4B84-8659-4F6D-AE91-37BFC8F20626}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{503D4B84-8659-4F6D-AE91-37BFC8F20626}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{503D4B84-8659-4F6D-AE91-37BFC8F20626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAD0BC60-7B6A-4D24-8B85-E9FBB05E1EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD0BC60-7B6A-4D24-8B85-E9FBB05E1EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD0BC60-7B6A-4D24-8B85-E9FBB05E1EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD0BC60-7B6A-4D24-8B85-E9FBB05E1EBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

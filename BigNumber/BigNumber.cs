@@ -9,23 +9,25 @@ namespace BigNumber
 {
     public class BigNumber
     {
-        Algorithms.Queue<int> inQueue;
-        Algorithms.Queue<int> resultQueue;
+        public Algorithms.Queue<int> inQueue;
 
         public BigNumber(string strNumber)
         {
             inQueue = new Algorithms.Queue<int>();
-            resultQueue = new Algorithms.Queue<int>();
+            
 
             foreach (char chr in strNumber)
                 if (int.TryParse(chr.ToString(), out int i))
                     inQueue.Enqueue(i);
         }
 
-        public Algorithms.Queue<int> DivBy(int x, out int reminder)
+        public void DivBy(int x, out int reminder)
         {
+            Algorithms.Queue<int> resultQueue;
+            resultQueue = new Algorithms.Queue<int>();
+
             reminder = 0;
-            if (inQueue.Size() <= 0) return null;
+            if (inQueue.Size() <= 0) return;
             int i = 0;
             while (inQueue.Size() > 0)
             {
@@ -46,8 +48,15 @@ namespace BigNumber
             }
             reminder = i;
             if (resultQueue.Size() == 0) resultQueue.Enqueue(0);
-            return resultQueue;
+
+            inQueue = new Algorithms.Queue<int>();
+            foreach (var item in resultQueue)
+            {
+                inQueue.Enqueue(item);
+            }
         }
+
+
 
         public void ToBinary()
         {

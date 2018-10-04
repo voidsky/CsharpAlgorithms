@@ -1,13 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using Algorithms;
 
 namespace GcdOfBigNumbers
 {
     public class BigNumber
     {
         private string numerals;
+        List<uint> bytes;
+
         public BigNumber(string numerals)
         {
+            bytes = new List<uint>();
             this.numerals = numerals;
+            foreach (var chr in numerals)
+            {
+                if (chr>='0' && chr <='9')
+                    bytes.Add((uint)chr & 15);
+                if (chr >= 'A' && chr <= 'F')
+                    bytes.Add((uint)(10 + ((chr & 15) - 1)));
+
+            }
         }
 
         public bool IsEven()
