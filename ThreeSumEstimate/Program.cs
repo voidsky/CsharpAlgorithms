@@ -11,21 +11,25 @@ namespace ThreeSumEstimate
     {
         static void Main(string[] args)
         {
-            int N = int.Parse(args[0]);
-            int[] a = new int[N];
-            Random rnd = new Random();
-            for (int i = 0; i < N; i++)
-                a[i] = rnd.Next(-100000, 100000);
+            foreach (var arg in args)
+            {
+                int N = int.Parse(arg);
+                int[] a = new int[N];
 
-            Stopwatch stopwatch = new Stopwatch();
 
-            stopwatch.Start();
-            int cnt = ThreeSum.count(a);
-            stopwatch.Stop();
-            var time = stopwatch.Elapsed;
+                Random rnd = new Random();
+                for (int i = 0; i < N; i++)
+                    a[i] = rnd.Next(-100000, 100000);
 
-            Console.WriteLine($"{cnt} triple {time.ToString()}");
+                Stopwatch stopwatch = new Stopwatch();
 
+                stopwatch.Start();
+                int cnt = ThreeSum.count(a);
+                stopwatch.Stop();
+                var time = stopwatch.Elapsed;
+
+                Console.WriteLine($"{arg};{cnt};{time.TotalMilliseconds}");
+            }
         }
     }
 }
