@@ -25,18 +25,21 @@ namespace FindNSmallest
         [Test]
         public void TestNSmallestKeysRandom()
         {
+            int numberToGet = 1000;
+            int arraySize = 1000_000;
+
             Random rand = new Random();
             List<int> randomBytes = new List<int>();
-            for (int i = 1; i <= 1000_000; i++)
+            for (int i = 1; i <= arraySize; i++)
                 randomBytes.Add(rand.Next());
 
             NSmallestUsingBST nsm = new NSmallestUsingBST();
             nsm.SetNumbers(randomBytes);
-            List<int> smallest = nsm.FindSmallest(1000);
+            List<int> smallest = nsm.FindSmallest(numberToGet);
 
             List<int> randomBytesSorted = new List<int>(randomBytes);
             randomBytesSorted.Sort();
-            randomBytesSorted = randomBytesSorted.GetRange(0,1000);
+            randomBytesSorted = randomBytesSorted.GetRange(0, numberToGet);
 
             Assert.That(smallest, Is.EquivalentTo(randomBytesSorted));
         }
