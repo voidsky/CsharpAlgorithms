@@ -8,15 +8,15 @@ using NUnit.Framework;
 namespace Sort
 {
     [TestFixture]
-    public class InsertionTest
+    public class ShellTest
     {
         [Test]
-        public void TestInsertionSort()
+        public void TestShellSort()
         {
             int[] a = new[] { 5, 8, 1, 10, 7, 3, 4, 2 };
             int[] b = new[] { 1, 2, 3, 4, 5, 7, 8, 10 };
 
-            Insertion<int>.Sort(a);
+            Shell<int>.Sort(a);
             CollectionAssert.AreEqual(a,b);
         }
 
@@ -26,7 +26,7 @@ namespace Sort
         public void TestNSmallest(int minCount, int[] expect)
         {
             int[] a = new[] { 5, 8, 1, 10, 7, 3, 4, 2 };
-            List<int> smallest = Insertion<int>.FindSmallest(a,minCount);
+            List<int> smallest = Shell<int>.FindSmallest(a, minCount);
             CollectionAssert.AreEqual(smallest, expect.ToList());
         }
     }

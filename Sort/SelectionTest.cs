@@ -10,6 +10,16 @@ namespace Sort
     [TestFixture]
     public class SelectionTest
     {
+        [Test]
+        public void TestSelectionSort()
+        {
+            int[] a = new[] { 5, 8, 1, 10, 7, 3, 4, 2 };
+            int[] b = new[] { 1, 2, 3, 4, 5, 7, 8, 10 };
+
+            Selection<int>.Sort(a);
+            CollectionAssert.AreEqual(a, b);
+        }
+
         [TestCase(1, new[] { 1 })]
         [TestCase(2, new[] { 1, 2 })]
         [TestCase(6, new[] { 1, 2, 3, 4, 5, 7 })]
@@ -17,7 +27,7 @@ namespace Sort
         {
             int[] a = new[] { 5, 8, 1, 10, 7, 3, 4, 2 };
             List<int> smallest = Selection<int>.FindSmallest(a,minCount);
-            Assert.That(smallest, Is.EquivalentTo(expect.ToList()));
+            CollectionAssert.AreEqual(smallest, expect.ToList());
         }
     }
 }

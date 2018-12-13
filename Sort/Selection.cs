@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
+    /*  Selection sort uses N 2/2 compares and N exchanges to sort an array of length N. */
     public static class Selection<T> where T:IComparable
     {
         public static void Sort(T[] a)
