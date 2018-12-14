@@ -12,7 +12,7 @@ namespace FindNSmallest
     {
         static void Main(string[] args)
         {
-            int n = 100000;
+            int n = 10000;
             int k = 10;
 
             Console.WriteLine($"Sukurti efektyvų algoritmą ir parašyti programą, kuri iš n skaičių surastų k mažiausių.");
@@ -61,6 +61,17 @@ namespace FindNSmallest
             List<int> randomBytes4 = new List<int>(randomBytes);
             stopwatch.Start();
             Shell<int>.FindSmallest(randomBytes4.ToArray(), k);
+            stopwatch.Stop();
+
+            Console.WriteLine("Užtruko: {0}", stopwatch.Elapsed);
+            Console.ReadLine();
+
+            // ------------------------------------------------- 
+
+            Console.WriteLine($"Randame {k} maziausiu naudojant Merge sort.");
+            List<int> randomBytes5 = new List<int>(randomBytes);
+            stopwatch.Start();
+            Shell<int>.FindSmallest(randomBytes5.ToArray(), k);
             stopwatch.Stop();
 
             Console.WriteLine("Užtruko: {0}", stopwatch.Elapsed);
