@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Insertion.cs" />
+    <Compile Include="Merge.cs" />
+    <Compile Include="MergeTest.cs" />
     <Compile Include="ShellTest.cs" />
     <Compile Include="Selection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
