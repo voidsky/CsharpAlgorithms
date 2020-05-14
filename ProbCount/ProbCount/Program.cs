@@ -83,6 +83,7 @@ namespace Count
             return pos;
         }
 
+        /* Implementation of Flajolet-Martin algorithm. */
         private static void ProbCount(string file, IHashFunction hashFunction)
         {
             const int L = 32;
@@ -122,6 +123,7 @@ namespace Count
             #endregion
         }
 
+        /* Implementation of Adaptive Sampling algorithm (Flajolet-Chesnay). */
         private static void AdaptiveSampling(string file, IHashFunction hashFunction)
         {
             const int m = 64;
