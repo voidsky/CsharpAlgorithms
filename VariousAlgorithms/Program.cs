@@ -22,7 +22,7 @@ namespace VariousAlgorithms
         }
         static void Main(string[] args)
         {
-            CountChangePerformanceTest();
+            //CountChangePerformanceTest();
 
             Console.ReadLine();
         }

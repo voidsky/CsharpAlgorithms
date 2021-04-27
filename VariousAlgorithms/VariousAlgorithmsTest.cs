@@ -21,5 +21,23 @@ namespace VariousAlgorithms
             int result = VariousAlgorithms.CountChange(amount, coinTypes);
             Assert.That(result, Is.EqualTo(expected));
         }
+
+        [Test]
+        [TestCase(1, 1, 1)]
+        [TestCase(2, 1, 1)]
+        [TestCase(2, 2, 1)]
+        [TestCase(3, 1, 1)]
+        [TestCase(3, 2, 2)]
+        [TestCase(3, 3, 1)]
+        [TestCase(4, 1, 1)]
+        [TestCase(4, 2, 3)]
+        [TestCase(4, 3, 3)]
+        [TestCase(4, 4, 1)]
+        [TestCase(8, 5, 35)]
+        public void PascalTriangleTest(int x, int y, int expected)
+        {
+            int result = VariousAlgorithms.PascalsTriagle(x ,y);
+            Assert.That(result, Is.EqualTo(expected));
+        }
     }
 }

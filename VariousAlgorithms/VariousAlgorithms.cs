@@ -25,5 +25,15 @@ namespace VariousAlgorithms
             return CountChange(a - coinTypes[coinIndex], coinTypes, coinIndex) +
                 CountChange(a, coinTypes, ++coinIndex);
         }
+
+        // Calculate pascal triangle value on y row, x column using
+        // only recursion.
+        public static int PascalsTriagle(int y, int x)
+        {
+            if (x == 1 || x == y) return 1;
+            return PascalsTriagle(x-1, y-1) + PascalsTriagle(x, y-1);
+        }
+
+
     }
 }
